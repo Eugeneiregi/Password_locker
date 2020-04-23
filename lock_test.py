@@ -84,3 +84,16 @@ if __name__== '__main__':
             test_credentials.save_credentials()
 
             self.assertEqual(len(Credentials.credential_list), 2)
+
+
+
+        def test_save_multiple_user(self):
+            '''
+            test to check if we can save multiple users object to our user_list
+            '''
+
+            self.new_user.save_user()
+            test_user = User("Ado", "Pass", "Philly")
+            test_user.save_user()
+
+            self.assertEqual(len(User.user_list), 2)
