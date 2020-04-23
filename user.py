@@ -26,3 +26,12 @@ class User:
         '''
 
         User.user_list.remove(self)
+
+    @classmethod
+    def view_users(cls):
+        '''
+        method to view users list
+        '''
+
+        return cls.user_list
+    
