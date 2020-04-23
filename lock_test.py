@@ -54,3 +54,12 @@ if __name__== '__main__':
             self.new_credentials.save_credentials()
 
             self.assertEqual(len(Credentials.credential_list), 1)
+
+        def test_save_user(self):
+            '''
+            test to see if contact object is saved into the credential list
+            '''
+
+            self.new_user.save_user()
+
+            self.assertEqual(len(User.user_list), 1)
