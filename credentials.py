@@ -14,3 +14,19 @@ class Credentials:
 
     def __repr__(self):
         return "accountname: %s password: %s" %(self.account_name,self.password)
+
+
+    def save_credentials(self):
+            '''
+        save_credentials method that saves credential object into credentials_list
+        '''
+
+    Credentials.credential_list.append(self)
+
+    @classmethod
+    def view_credentials(cls):
+        '''
+        method to view credentials list
+        '''
+
+        return cls.credential_list
