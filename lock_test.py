@@ -17,3 +17,18 @@ if __name__== '__main__':
 
         self.new_credentials = Credentials("Facebook", "1234567")
         self.new_user = User("Eugene", "peter", "Iregi")
+
+        def test_init(self):
+            '''
+            test_init for testing object initialization
+            '''
+
+            self.assertEqual(self.new_credentials.account_name, "Facebook")
+
+            self.assertEqual(self.new_credentials.password, "1234567")
+
+            self.assertEqual(self.new_user.first_name, "Eugene")
+
+            self.assertEqual(self.new_user.last_name, "peter")
+
+            self.assertEqual(self.new_user.username, "Iregi")
