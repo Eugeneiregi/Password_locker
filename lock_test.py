@@ -63,3 +63,13 @@ if __name__== '__main__':
             self.new_user.save_user()
 
             self.assertEqual(len(User.user_list), 1)
+
+
+        def tearDown(self):
+            '''
+            Clean up for tests
+            '''
+
+            Credentials.credential_list = []
+
+            User.user_list = []
