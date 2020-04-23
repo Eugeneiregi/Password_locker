@@ -32,3 +32,10 @@ if __name__== '__main__':
             self.assertEqual(self.new_user.last_name, "peter")
 
             self.assertEqual(self.new_user.username, "Iregi")
+
+        def test_view_user(self):
+            '''
+            method that shows a list of users saved
+            '''
+
+            self.assertEqual(User.view_users(), User.user_list)
