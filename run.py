@@ -1,7 +1,7 @@
 import os
 from credentials import Credentials
 import pyperclip
-from time import time
+import time
 
 
 def generate_password():
@@ -47,7 +47,7 @@ if have_passed == "Yes":
             print("Enter Password")
             password = input()
 
-    print("Create new Account and choose or Generate Password")
+    print("Create new Account and choose or Generate Password  with okay button")
     accept = input()
 
     if accept == "Yes":
@@ -74,5 +74,5 @@ if have_passed == "Yes":
     print(Credentials.credential_list.clear())
 
     print("You account has been deleted successfully")
-
+    print("Bye have a nice day")
     print("Copyright@2019. Thanks For Using Password-Locker APP.")
