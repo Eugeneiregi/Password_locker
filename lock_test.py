@@ -73,3 +73,14 @@ if __name__== '__main__':
             Credentials.credential_list = []
 
             User.user_list = []
+
+        def test_save_mulltiple_credentials(self):
+            '''
+            test_save_multiple credentials to check if we can save multiple credentials object to our credentials_list
+            '''
+
+            self.new_credentials.save_credentials()
+            test_credentials = Credentials("Ig", "32667843")
+            test_credentials.save_credentials()
+
+            self.assertEqual(len(Credentials.credential_list), 2)
