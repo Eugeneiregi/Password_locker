@@ -30,3 +30,11 @@ class Credentials:
         '''
 
         return cls.credential_list
+
+
+    def delete_credentials(self):
+        '''
+        delete method for deleting credential_list
+        '''
+
+        Credentials.credential_list.remove(self)
