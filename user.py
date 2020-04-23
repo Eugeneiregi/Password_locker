@@ -11,3 +11,18 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.username = username 
+
+    def save_user(self):
+            '''
+        save_user method that saves users into the user_list
+        '''
+
+    User.user_list.append(self)    
+
+
+    def delete_user(self):
+        '''
+        delete method for deleting user_list
+        '''
+
+        User.user_list.remove(self)
