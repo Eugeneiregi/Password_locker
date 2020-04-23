@@ -97,3 +97,15 @@ if __name__== '__main__':
             test_user.save_user()
 
             self.assertEqual(len(User.user_list), 2)
+
+        def test_delete_credentials(self):
+            '''
+            To test if we can remove credentials from our list
+            '''
+
+            self.new_credentials.save_credentials()
+            test_credentials = Credentials("Ig", "32667843")
+            test_credentials.save_credentials()
+
+            self.new_credentials.delete_credentials()
+            self.assertEqual(len(Credentials.credential_list), 1)
